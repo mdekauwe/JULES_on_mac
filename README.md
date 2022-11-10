@@ -6,7 +6,7 @@ Add:
 
 ```
 build.prop{fc.flags}[jules/src/io/dump/read_dump_mod.F90] = $fflags_common -fallow-argument-mismatch
-'''
+```
 
 In file: jules-vn7.0/etc/fcm-make/ncdf/netcdf.cfg
 
@@ -14,13 +14,13 @@ Change:
 
 ```
 $ncdf_ldflags_dynamic{?} = -Wl,--rpath=${JULES_NETCDF_LIB_PATH}
-'''
+```
 
 to (i.e. --rpath to -rpath):
 
 ```
 $ncdf_ldflags_dynamic{?} = -Wl,-rpath ${JULES_NETCDF_LIB_PATH}
-'''
+```
 
 Change args in "etc/fcm-make/platform/envars.cfg"
 
@@ -41,10 +41,10 @@ $JULES_NETCDF_INC_PATH{?} = $JULES_NETCDF_PATH/include
 $JULES_NETCDF_LIB_PATH{?} = $JULES_NETCDF_PATH/lib
 $JULES_FFLAGS_EXTRA{?}    =
 $JULES_LDFLAGS_EXTRA{?}   =
-'''
+```
 
 Then to build:
 
 ```
 $ fcm make -f etc/fcm-make/make.cfg
-'''
+```
