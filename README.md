@@ -48,3 +48,14 @@ Then to build:
 ```
 $ fcm make -f etc/fcm-make/make.cfg
 ```
+
+# Don't need the below, but alternatively you can set these
+
+export JULES_NETCDF=netcdf
+export JULES_NETCDF_PATH=/opt/local
+export JULES_BUILD=normal
+export JULES_REMOTE=local
+export JULES_OMP=noomp
+export JULES_COMPILER=gfortran
+export JULES_MPI=nompi
+export JULES_PLATFORM=custom
